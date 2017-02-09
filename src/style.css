@@ -1,0 +1,107 @@
+/*!
+ * Copyright (c) 2017 z-kit contributors.
+ * MIT LICENSE
+ * https://github.com/z-kit/z-input
+ */
+
+/* Variables */
+:root {
+  --primary-color: #3c91e6;
+  --warning-color: #fed766;
+  --success-color: #76b245;
+  --danger-color: #f03a47;
+  --error-color: #f00;
+  --neutral-color: #aaa;
+  --neutral-border-color: #ddd;
+}
+
+/* Container element */
+.z-input {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+
+/* Indicates the container contains a floating label */
+.z-input--label { margin-top: 2.25rem; }
+
+/* The input box */
+.z-input > input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 2.25rem;
+  font-size: 1rem;
+  outline-width: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--neutral-color);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.z-input > input:disabled { opacity: 0.5; }
+.z-input > input:focus { border-color: var(--primary-color); }
+.z-input--success > input { border-color: var(--success-color); }
+.z-input--warning > input { border-color: var(--warning-color); }
+.z-input--danger > input { border-color: var(--danger-color); }
+.z-input--error > input { border-color: var(--error-color); }
+.z-input--prefix > input { padding-left: 2.125rem; }
+.z-input--suffix > input { padding-right: 2.125rem; }
+.z-input--dark > input { color: #fff; }
+
+/* Borderless outlined input box */
+.z-input--borderless > input {
+  border: none;
+  outline-width: 4px;
+}
+
+/* The input block useful for search bars, header inputs, etc */
+.z-input--box > input {
+  border: 1px solid var(--neutral-border-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: #fff;
+  height: 3rem;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.11);
+}
+
+.z-input--box > input:focus {
+  border-color: var(--neutral-border-color);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.11);
+}
+
+/* The prefix and suffix containers, useful for putting icons inside the input box */
+.z-input__prefix,
+.z-input__suffix {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  top: 0;
+}
+
+.z-input__prefix { left: 0; }
+.z-input__suffix { right: 0; }
+
+/* The floating label */
+.z-input__label {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  font-size: 1rem;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: var(--neutral-color);
+  transition: font-size 0.2s ease, top 0.2s ease, left 0.2s ease;
+}
+
+.z-input--prefix > input + .z-input__label { left: 2rem; }
+
+.z-input > input:focus + .z-input__label,
+.z-input > input:valid + .z-input__label,
+.z-input--success > input + .z-input__label,
+.z-input--error > input + .z-input__label {
+  font-size: 0.85rem;
+  top: -1.25rem;
+  left: 0;
+}
