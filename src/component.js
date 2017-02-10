@@ -50,8 +50,8 @@ export function ZInput(e) {
     const labelProps = { className: classnames.label };
     if (inputProps.name) labelProps.for = inputProps.name;
     const eLabel = label ? e('label', labelProps, label) : null;
-    const ePrefix = prefix ? e('div', {}, prefix) : null;
-    const eSuffix = suffix ? e('div', {}, suffix) : null;
+    const ePrefix = prefix ? e('div', { className: classnames.prefix }, prefix) : null;
+    const eSuffix = suffix ? e('div', { className: classnames.suffix }, suffix) : null;
     const classes = [classnames.wrapper];
     if (label) classes.push(classnames.hasLabel);
     if (success) classes.push(classnames.hasSuccess);
