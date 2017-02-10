@@ -93,7 +93,7 @@ storiesOf('CSS component', module)
       <div className="z-input__suffix" />
     </div>
   ))
-  .add('disabled', () => (
+  .add('disabled input', () => (
     <div className="z-input">
       <input
         name="test"
@@ -130,7 +130,7 @@ storiesOf('Stateless functional component', module)
     </div>
   ))
   .add('prefix and suffix', () => <ZInput placeholder="Type something" prefix suffix />)
-  .add('disabled', () => <ZInput placeholder="Type something" disabled />)
+  .add('disabled input', () => <ZInput placeholder="Type something" disabled />)
   .add('dark', () => (
     <div style={{ width: '100%', height: '300px', background: '#333' }}>
       <ZInput placeholder="Type something" dark />
