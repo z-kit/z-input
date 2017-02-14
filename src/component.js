@@ -48,7 +48,7 @@ export function ZInput(e) {
     }
     const eInput = e('input', inputProps);
     const labelProps = { className: classnames.label };
-    if (inputProps.name) labelProps.for = inputProps.name;
+    if (inputProps.id) labelProps.for = inputProps.id;
     const eLabel = label ? e('label', labelProps, label) : null;
     const ePrefix = prefix ? e('div', { className: classnames.prefix }, prefix) : null;
     const eSuffix = suffix ? e('div', { className: classnames.suffix }, suffix) : null;

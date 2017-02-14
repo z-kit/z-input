@@ -74,10 +74,10 @@ test('Floating label', (t) => {
 
 test('Automatic label for', (t) => {
   const msg = 'should be enabled';
-  const actual = renderJSX(<ZInput name="test" label="Type something" />);
+  const actual = renderJSX(<ZInput id="test" label="Type something" />);
   const expected = JSX(
     <div className="z-input z-input--label">
-      <input name="test" type="text" />
+      <input id="test" type="text" />
       <label for="test" className="z-input__label">Type something</label>
     </div>
   );
