@@ -8,7 +8,6 @@ storiesOf('CSS component', module)
   .add('default', () => (
     <div className="z-input">
       <input
-        name="test"
         type="text"
         placeholder="Type something"
         required
@@ -18,7 +17,6 @@ storiesOf('CSS component', module)
   .add('box', () => (
     <div className="z-input z-input--box">
       <input
-        name="test"
         type="text"
         placeholder="Type something"
         required
@@ -28,7 +26,6 @@ storiesOf('CSS component', module)
   .add('borderless', () => (
     <div className="z-input z-input--borderless">
       <input
-        name="test"
         type="text"
         placeholder="Type something"
         required
@@ -38,18 +35,17 @@ storiesOf('CSS component', module)
   .add('label', () => (
     <div className="z-input z-input--label">
       <input
-        name="test"
+        id="test"
         type="text"
         required
       />
-      <label htmlFor="text" className="z-input__label">Type something</label>
+      <label htmlFor="test" className="z-input__label">Type something</label>
     </div>
   ))
   .add('colors', () => (
     <div>
       <div className="z-input z-input--success">
         <input
-          name="test"
           type="text"
           placeholder="Type something"
           required
@@ -57,7 +53,6 @@ storiesOf('CSS component', module)
       </div>
       <div className="z-input z-input--warning">
         <input
-          name="test"
           type="text"
           placeholder="Type something"
           required
@@ -65,7 +60,6 @@ storiesOf('CSS component', module)
       </div>
       <div className="z-input z-input--danger">
         <input
-          name="test"
           type="text"
           placeholder="Type something"
           required
@@ -73,7 +67,6 @@ storiesOf('CSS component', module)
       </div>
       <div className="z-input z-input--error">
         <input
-          name="test"
           type="text"
           placeholder="Type something"
           required
@@ -84,7 +77,6 @@ storiesOf('CSS component', module)
   .add('prefix and suffix', () => (
     <div className="z-input z-input--prefix z-input--suffix">
       <input
-        name="test"
         type="text"
         placeholder="Type something"
         required
@@ -96,7 +88,6 @@ storiesOf('CSS component', module)
   .add('disabled input', () => (
     <div className="z-input">
       <input
-        name="test"
         type="text"
         placeholder="Type something"
         disabled
@@ -107,7 +98,6 @@ storiesOf('CSS component', module)
     <div style={{ width: '100%', height: '300px', background: '#333' }}>
       <div className="z-input z-input--dark">
         <input
-          name="test"
           type="text"
           placeholder="Type something"
           required
@@ -120,7 +110,7 @@ storiesOf('Stateless functional component', module)
   .add('default', () => <ZInput placeholder="Type something" />)
   .add('box', () => <ZInput placeholder="Type something" box />)
   .add('borderless', () => <ZInput placeholder="Type something" borderless />)
-  .add('label', () => <ZInput label="Type something" required />)
+  .add('label', () => <ZInput id="test" label="Type something" required />)
   .add('colors', () => (
     <div>
       <ZInput placeholder="Type something" success />
