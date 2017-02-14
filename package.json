@@ -1,6 +1,6 @@
 {
   "name": "z-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic styled text input for your web application",
   "main": "dist/index.js",
   "minified:main": "dist/index.min.js",
