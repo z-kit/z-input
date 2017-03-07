@@ -89,7 +89,7 @@ test('CSS component - colors', (t) => {
 test('CSS component - colors', (t) => {
   t.plan(1);
   const msg = 'should render the warning color';
-  const expected = 'rgb(254, 215, 102)';
+  const expected = 'rgb(224, 185, 56)';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
     .wait('.z-input')
@@ -101,7 +101,7 @@ test('CSS component - colors', (t) => {
 test('CSS component - colors', (t) => {
   t.plan(1);
   const msg = 'should render the danger color';
-  const expected = 'rgb(240, 58, 71)';
+  const expected = 'rgb(216, 52, 63)';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
     .wait('.z-input')
