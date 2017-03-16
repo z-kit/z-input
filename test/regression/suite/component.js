@@ -16,7 +16,7 @@ test('CSS component - default', (t) => {
 test('CSS component - default', (t) => {
   t.plan(1);
   const msg = 'should render the bottom border';
-  const expected = '2px solid rgb(170, 170, 170)';
+  const expected = '2px solid rgb(153, 153, 153)';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
     .wait('.z-input')
