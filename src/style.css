@@ -34,7 +34,7 @@
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  outline-width: 0;
+  outline: none;
   background: transparent;
   border: none;
   border-bottom: 2px solid var(--neutral-color);
@@ -52,10 +52,7 @@
 .z-input--dark > input { color: #fff; }
 
 /* Borderless outlined input box */
-.z-input--borderless > input {
-  border: none;
-  outline-width: 4px;
-}
+.z-input--borderless > input { border: none; }
 
 /* The input block useful for search bars, header inputs, etc */
 .z-input--box > input {
