@@ -14,6 +14,7 @@ A basic styled text input for your web application
 - [How to use](#howto)
   - [CSS component](#css)
   - [Stateless Functional Component](#sfc)
+- [Theming](#theming)
 - [License](#license)
 
 ## <a name="install"></a> Install
@@ -122,6 +123,23 @@ Render the HTML by using the SFC and passing props.
 ```jsx
 <ZInput placeholder="Type something" />
 ```
+
+## <a name="theming"></a> Theming
+
+Since `1.3.0` you can theme `z-input` using CSS Variables!
+
+The list of variables available is below:
+
+| Variable               | Expected type | Description                                     |
+| ---------------------- | ------------- | ----------------------------------------------- |
+| --primary-color        | `color`       | The border-color for selected inputs            |
+| --success-color        | `color`       | The border-color for selected success inputs    |
+| --warning-color        | `color`       | The border-color for selected warnings inputs   |
+| --danger-color         | `color`       | The border-color for selected danger inputs     |
+| --error-color          | `color`       | The border-color for selected errored inputs    |
+| --neutral-border-color | `color`       | The border-color for idle inputs                |
+| --neutral-color        | `color`       | The text color for placeholders/floating labels |
+
 
 ## <a name="license"></a> LICENSE
 
