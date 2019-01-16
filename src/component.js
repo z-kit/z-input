@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017 z-kit contributors.
+ * Copyright (c) 2019 z-kit contributors.
  * @license MIT LICENSE
  * https://github.com/z-kit/z-input
  */
@@ -37,7 +37,8 @@ export function ZInput(e) {
     dark,
     borderless,
     box,
-    ...props }) => {
+    ...props
+  }) => {
     const inputProps = {
       type: props.type || 'text',
       ...props,
