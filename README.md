@@ -139,7 +139,7 @@ The list of variables available is below:
 | --error-color          | `color`       | The border-color for selected errored inputs    |
 | --neutral-border-color | `color`       | The border-color for idle inputs                |
 | --neutral-color        | `color`       | The text color for placeholders/floating labels |
-
+| --dark-color           | `color`       | The background color for input labels           |
 
 ## <a name="license"></a> LICENSE
 
