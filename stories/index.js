@@ -39,7 +39,7 @@ storiesOf('CSS component', module)
         type="text"
         required
       />
-      <label htmlFor="test" className="z-input__label">Type something</label>
+      <label htmlFor="test" className="z-input__label">Name</label>
     </div>
   ))
   .add('colors', () => (

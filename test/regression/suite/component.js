@@ -52,7 +52,7 @@ test('CSS component - borderless', (t) => {
 test('CSS component - label', (t) => {
   t.plan(1);
   const msg = 'should render the label at the correct position';
-  const expected = '4px';
+  const expected = '16px';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=label')
     .wait('.z-input')
@@ -64,7 +64,7 @@ test('CSS component - label', (t) => {
 test('CSS component - floating label', (t) => {
   t.plan(1);
   const msg = 'should float the label';
-  const expected = '-20px';
+  const expected = '-8px';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=label')
     .wait('.z-input')
