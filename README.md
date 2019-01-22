@@ -71,7 +71,7 @@ Just add the HTML structure and CSS classes to reproduce the UI component.
 
 ### Class hierarchy
 
-| Recommended HTML tags                           | Parent | Class                  | Description                                                             | Type     |
+|              Recommended HTML tags              | Parent |         Class          |                               Description                               |   Type   |
 | ----------------------------------------------- | ------ | ---------------------- | ----------------------------------------------------------------------- | -------- |
 | `div`, `section`, `main`, `article`, `fieldset` | `root` | `.z-input`             | Root container                                                          | Block    |
 | Any containing `.z-input`                       | root   | `.z-input--label`      | Makes space for a floating label                                        | Modifier |
@@ -102,7 +102,7 @@ Render the HTML by using the SFC and passing props.
 
 ### Supported Props
 
-| Prop name    | Expected Type               | Description                                                                          |
+|  Prop name   |        Expected Type        |                                     Description                                      |
 | ------------ | --------------------------- | ------------------------------------------------------------------------------------ |
 | `label`      | `string` or `TextNode`      | The floating label to render                                                         |
 | `borderless` | `boolean`                   | Pass true to render a borderless input box                                           |
@@ -130,7 +130,7 @@ Since `1.3.0` you can theme `z-input` using CSS Variables!
 
 The list of variables available is below:
 
-| Variable               | Expected type | Description                                     |
+|        Variable        | Expected type |                   Description                   |
 | ---------------------- | ------------- | ----------------------------------------------- |
 | --primary-color        | `color`       | The border-color for selected inputs            |
 | --success-color        | `color`       | The border-color for selected success inputs    |
