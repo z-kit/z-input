@@ -1,7 +1,7 @@
 import test from 'ava';
 import Nightmare from 'nightmare';
 
-test('CSS component - default', (t) => {
+test('SFC component - default', (t) => {
   t.plan(1);
   const msg = 'should render the placeholder';
   const expected = 'Type something';
@@ -13,7 +13,7 @@ test('CSS component - default', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - border', (t) => {
+test('SFC component - border', (t) => {
   t.plan(1);
   const msg = 'should render the bottom border';
   const expected = '2px solid rgb(153, 153, 153)';
@@ -25,7 +25,7 @@ test('CSS component - border', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - box', (t) => {
+test('SFC component - box', (t) => {
   t.plan(1);
   const msg = 'should render shadows on box input';
   const notExpected = 'none';
@@ -37,7 +37,7 @@ test('CSS component - box', (t) => {
     .then(actual => t.notDeepEqual(notExpected, actual, msg));
 });
 
-test('CSS component - borderless', (t) => {
+test('SFC component - borderless', (t) => {
   t.plan(1);
   const msg = 'should render borderless input';
   const expected = '0px none rgb(0, 0, 0)';
@@ -49,7 +49,7 @@ test('CSS component - borderless', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - label', (t) => {
+test('SFC component - label', (t) => {
   t.plan(1);
   const msg = 'should render the label at the correct position';
   const expected = '16px';
@@ -61,7 +61,7 @@ test('CSS component - label', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - floating label', (t) => {
+test('SFC component - floating label', (t) => {
   t.plan(1);
   const msg = 'should float the label';
   const expected = '-8px';
@@ -74,7 +74,7 @@ test('CSS component - floating label', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - success', (t) => {
+test('SFC component - success', (t) => {
   t.plan(1);
   const msg = 'should render the success color';
   const expected = 'rgb(118, 178, 69)';
@@ -86,7 +86,7 @@ test('CSS component - success', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - warning', (t) => {
+test('SFC component - warning', (t) => {
   t.plan(1);
   const msg = 'should render the warning color';
   const expected = 'rgb(224, 185, 56)';
@@ -98,7 +98,7 @@ test('CSS component - warning', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - danger', (t) => {
+test('SFC component - danger', (t) => {
   t.plan(1);
   const msg = 'should render the danger color';
   const expected = 'rgb(216, 52, 63)';
@@ -110,7 +110,7 @@ test('CSS component - danger', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - error', (t) => {
+test('SFC component - error', (t) => {
   t.plan(1);
   const msg = 'should render the error color';
   const expected = 'rgb(255, 0, 0)';
@@ -122,7 +122,7 @@ test('CSS component - error', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - prefix and suffix padding', (t) => {
+test('SFC component - prefix and suffix padding', (t) => {
   t.plan(1);
   const msg = 'should render the input padding to make room for prefixes and suffixes';
   const expected = '0px 34px';
@@ -134,7 +134,7 @@ test('CSS component - prefix and suffix padding', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - prefix position', (t) => {
+test('SFC component - prefix position', (t) => {
   t.plan(1);
   const msg = 'should render the prefix on the left';
   const expected = '0px';
@@ -146,7 +146,7 @@ test('CSS component - prefix position', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - suffix position', (t) => {
+test('SFC component - suffix position', (t) => {
   t.plan(1);
   const msg = 'should render the suffix on the right';
   const expected = '0px';
@@ -158,7 +158,7 @@ test('CSS component - suffix position', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - disabled input', (t) => {
+test('SFC component - disabled input', (t) => {
   t.plan(1);
   const msg = 'should render an input with some opacity';
   const expected = 0;
@@ -173,7 +173,7 @@ test('CSS component - disabled input', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
-test('CSS component - dark', (t) => {
+test('SFC component - dark', (t) => {
   t.plan(1);
   const msg = 'should render an input with white text color';
   const expected = 'rgb(255, 255, 255)';
