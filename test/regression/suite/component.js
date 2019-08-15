@@ -6,7 +6,7 @@ test('CSS component - default', (t) => {
   const msg = 'should render the placeholder';
   const expected = 'Type something';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--default')
     .wait('.z-input')
     .evaluate(() => document.querySelector('.z-input > input').getAttribute('placeholder'))
     .end()
@@ -18,7 +18,7 @@ test('CSS component - border', (t) => {
   const msg = 'should render the bottom border';
   const expected = '2px solid rgb(153, 153, 153)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--default')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).borderBottom)
     .end()
@@ -30,7 +30,7 @@ test('CSS component - box', (t) => {
   const msg = 'should render shadows on box input';
   const notExpected = 'none';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=box')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--box')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).boxShadow)
     .end()
@@ -42,7 +42,7 @@ test('CSS component - borderless', (t) => {
   const msg = 'should render borderless input';
   const expected = '0px none rgb(0, 0, 0)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=borderless')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--borderless')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).border)
     .end()
@@ -54,7 +54,7 @@ test('CSS component - label', (t) => {
   const msg = 'should render the label at the correct position';
   const expected = '16px';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=label')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--label')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input__label')).top)
     .end()
@@ -66,7 +66,7 @@ test('CSS component - floating label', (t) => {
   const msg = 'should float the label';
   const expected = '-8px';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=label')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--label')
     .wait('.z-input')
     .type('.z-input > input', 'Test')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input__label')).top)
@@ -79,7 +79,7 @@ test('CSS component - success', (t) => {
   const msg = 'should render the success color';
   const expected = 'rgb(118, 178, 69)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--colors')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input:nth-of-type(1) > input')).borderColor)
     .end()
@@ -91,7 +91,7 @@ test('CSS component - warning', (t) => {
   const msg = 'should render the warning color';
   const expected = 'rgb(224, 185, 56)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--colors')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input:nth-of-type(2) > input')).borderColor)
     .end()
@@ -103,7 +103,7 @@ test('CSS component - danger', (t) => {
   const msg = 'should render the danger color';
   const expected = 'rgb(216, 52, 63)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--colors')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input:nth-of-type(3) > input')).borderColor)
     .end()
@@ -115,7 +115,7 @@ test('CSS component - error', (t) => {
   const msg = 'should render the error color';
   const expected = 'rgb(255, 0, 0)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=colors')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--colors')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input:nth-of-type(4) > input')).borderColor)
     .end()
@@ -127,7 +127,7 @@ test('CSS component - prefix and suffix padding', (t) => {
   const msg = 'should render the input padding to make room for prefixes and suffixes';
   const expected = '0px 34px';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=prefix%20and%20suffix')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--prefix-and-suffix')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).padding)
     .end()
@@ -139,7 +139,7 @@ test('CSS component - prefix position', (t) => {
   const msg = 'should render the prefix on the left';
   const expected = '0px';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=prefix%20and%20suffix')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--prefix-and-suffix')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input__prefix')).left)
     .end()
@@ -151,7 +151,7 @@ test('CSS component - suffix position', (t) => {
   const msg = 'should render the suffix on the right';
   const expected = '0px';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=prefix%20and%20suffix')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--prefix-and-suffix')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input__suffix')).right)
     .end()
@@ -163,7 +163,7 @@ test('CSS component - disabled input', (t) => {
   const msg = 'should render an input with some opacity';
   const expected = 0;
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=disabled%20input')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--disabled-input')
     .wait('.z-input')
     .evaluate(() => {
       const inputStyle = getComputedStyle(document.querySelector('.z-input > input'));
@@ -178,7 +178,7 @@ test('CSS component - dark', (t) => {
   const msg = 'should render an input with white text color';
   const expected = 'rgb(255, 255, 255)';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=dark')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--dark')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).color)
     .end()
