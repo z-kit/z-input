@@ -41,7 +41,6 @@
 }
 
 /* Indicates the container contains a floating label */
-.z-input--label { margin-top: 1rem; }
 .z-input--label > input { height: 3rem; }
 
 .z-input > input:disabled { opacity: 0.5; }
