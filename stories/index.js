@@ -85,6 +85,19 @@ storiesOf('CSS component', module)
       <div className="z-input__suffix" />
     </div>
   ))
+  .add('manual label', () => (
+    <div>
+      <div className="z-input z-input--label z-input--open">
+        <input type="text" />
+        <label className="z-input__label">Open</label>
+      </div>
+      <hr />
+      <div className="z-input z-input--label z-input--closed">
+        <input type="text" />
+        <label className="z-input__label">Closed</label>
+      </div>
+    </div>
+  ))
   .add('disabled input', () => (
     <div className="z-input">
       <input
@@ -119,8 +132,21 @@ storiesOf('Stateless functional component', module)
       <ZInput placeholder="Type something" error />
     </div>
   ))
-  .add('prefix and suffix', () => <ZInput placeholder="Type something" prefix suffix />)
+  .add('prefix and suffix', () => (
+    <div>
+      <ZInput placeholder="Type something" prefix suffix />
+      <hr />
+      <ZInput label="Label" prefix="$" suffix="!" />
+    </div>
+  ))
   .add('disabled input', () => <ZInput placeholder="Type something" disabled />)
+  .add('manual label', () => (
+    <div>
+      <ZInput label="Open" isOpen />
+      <hr />
+      <ZInput label="Closed" isOpen={false} />
+    </div>
+  ))
   .add('dark', () => (
     <div style={{ width: '100%', height: '300px', background: '#333' }}>
       <ZInput placeholder="Type something" dark />

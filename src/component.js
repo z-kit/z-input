@@ -19,6 +19,8 @@ const classnames = {
   isDark: styles['z-input--dark'] || 'z-input--dark',
   isBorderless: styles['z-input--borderless'] || 'z-input--borderless',
   isBox: styles['z-input--box'] || 'z-input--box',
+  open: styles['z-input--open'] || 'z-input--open',
+  closed: styles['z-input--closed'] || 'z-input--closed',
   prefix: styles['z-input__prefix'] || 'z-input__prefix',
   suffix: styles['z-input__suffix'] || 'z-input__suffix',
   label: styles['z-input__label'] || 'z-input__label',
@@ -37,6 +39,7 @@ export function ZInput(e) {
     dark,
     borderless,
     box,
+    isOpen,
     ...props
   }) => {
     const inputProps = {
@@ -64,6 +67,8 @@ export function ZInput(e) {
     if (suffix) classes.push(classnames.hasSuffix);
     if (borderless) classes.push(classnames.isBorderless);
     if (box) classes.push(classnames.isBox);
+    if (isOpen === true) classes.push(classnames.open);
+    if (isOpen === false) classes.push(classnames.closed);
     const className = classes.join(' ');
     return e('div', { className }, [eInput, eLabel, ePrefix, eSuffix]);
   };

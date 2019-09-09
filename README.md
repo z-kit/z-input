@@ -87,6 +87,8 @@ Just add the HTML structure and CSS classes to reproduce the UI component.
 | Any containing `.z-input`                       | root   | `.z-input__label`      | Renders a floating label                                                | Element  |
 | Any containing `.z-input`                       | root   | `.z-input__prefix`     | Renders a prefix element before the input text                          | Element  |
 | Any containing `.z-input`                       | root   | `.z-input__suffix`     | Renders a suffix element after the input text                           | Element  |
+| Any containing `.z-input`                       | root   | `.z-input--open`       | Forces floating label to be open in an labeled input                    | Modifier |
+| Any containing `.z-input`                       | root   | `.z-input--closed`     | Forces floating label to be closed in an labeled input                  | Modifier |
 
 #### Full working example:
 
@@ -115,6 +117,7 @@ Render the HTML by using the SFC and passing props.
 | `danger`     | `boolean`                   | Pass true to indicate danger and render a reddish border                             |
 | `error`      | `boolean`                   | Pass true to indicate error and render a red border                                  |
 | `dark`       | `boolean`                   | Pass true to indicate the input is in a dark background and input text will be white |
+| `isOpen`     | `boolean` or `undefined`    | Pass true or false to force the floating label to be open or closed                  |
 
 **Note that you can pass any attribute compatible with `input` that it will be automatically passed through.**
 

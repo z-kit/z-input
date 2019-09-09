@@ -176,3 +176,27 @@ test('Dark mode', (t) => {
   ).html();
   return t.deepEqual(actual, expected, msg);
 });
+
+test('Manual open label', (t) => {
+  const msg = 'should be supported';
+  const actual = shallow(<ZInput label="Test" isOpen />).html();
+  const expected = shallow(
+    <div className="z-input z-input--label z-input--open">
+      <input type="text" />
+      <label className="z-input__label">Test</label>
+    </div>
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Manual closed label', (t) => {
+  const msg = 'should be supported';
+  const actual = shallow(<ZInput label="Test" isOpen={false} />).html();
+  const expected = shallow(
+    <div className="z-input z-input--label z-input--closed">
+      <input type="text" />
+      <label className="z-input__label">Test</label>
+    </div>
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});

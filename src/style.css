@@ -118,8 +118,15 @@
 .z-input > input:focus + .z-input__label,
 .z-input > input:valid + .z-input__label,
 .z-input--success > input + .z-input__label,
-.z-input--error > input + .z-input__label {
+.z-input--error > input + .z-input__label,
+.z-input--open > input + .z-input__label {
   font-size: 0.85rem;
   top: -0.5rem;
   left: 1rem;
+}
+
+.z-input--closed > input:valid + .z-input__label,
+.z-input--closed > input:invalid + .z-input__label {
+  font-size: 1rem;
+  top: 1rem;
 }

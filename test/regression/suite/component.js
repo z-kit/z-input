@@ -125,7 +125,7 @@ test('SFC component - error', (t) => {
 test('SFC component - prefix and suffix padding', (t) => {
   t.plan(1);
   const msg = 'should render the input padding to make room for prefixes and suffixes';
-  const expected = '0px 34px';
+  const expected = '0px 50px';
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--prefix-and-suffix')
     .wait('.z-input')
@@ -181,6 +181,30 @@ test('SFC component - dark', (t) => {
     .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--dark')
     .wait('.z-input')
     .evaluate(() => getComputedStyle(document.querySelector('.z-input > input')).color)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('SFC component - manual label open', (t) => {
+  t.plan(1);
+  const msg = 'should render properly';
+  const expected = '-8px';
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--manual-label')
+    .wait('.z-input')
+    .evaluate(() => getComputedStyle(document.querySelector('.z-input--open > label')).top)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('SFC component - manual label closed', (t) => {
+  t.plan(1);
+  const msg = 'should render properly';
+  const expected = '16px';
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--manual-label')
+    .wait('.z-input')
+    .evaluate(() => getComputedStyle(document.querySelector('.z-input--closed > label')).top)
     .end()
     .then(actual => t.deepEqual(expected, actual, msg));
 });
