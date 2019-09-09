@@ -54,8 +54,8 @@
 .z-input--danger > input:focus + .z-input__label { color: var(--danger-color); }
 .z-input--error > input { border-color: var(--error-color); }
 .z-input--error > input + .z-input__label { color: var(--error-color); }
-.z-input--prefix > input { padding-left: 2.125rem; }
-.z-input--suffix > input { padding-right: 2.125rem; }
+.z-input--prefix > input { padding-left: 3.125rem; }
+.z-input--suffix > input { padding-right: 3.125rem; }
 .z-input--dark > input { color: #fff; }
 
 /* Borderless outlined input box */
@@ -80,9 +80,18 @@
 .z-input__suffix {
   position: absolute;
   display: block;
-  width: 2rem;
+  width: 3rem;
+  text-align: center;
+  line-height: 2.25rem;
   height: 100%;
   top: 0;
+}
+
+.z-input--box.z-input--prefix > .z-input__prefix,
+.z-input--box.z-input--suffix > .z-input__suffix,
+.z-input--label.z-input--prefix > .z-input__prefix,
+.z-input--label.z-input--suffix > .z-input__suffix {
+  line-height: 3rem;
 }
 
 .z-input__prefix { left: 0; }
